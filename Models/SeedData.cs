@@ -16,10 +16,11 @@ namespace RazorPagesMovie.Models
                 // Look for any movies.
                 if (context.Movie.Any())
                 {
-                    return;   // DB has been seeded
+                    return; // DB has been seeded
                 }
 
                 #region snippet1
+
                 context.Movie.AddRange(
                     new Movie
                     {
@@ -29,7 +30,8 @@ namespace RazorPagesMovie.Models
                         Price = 7.99M,
                         Rating = "R"
                     },
-                #endregion
+
+                    #endregion
 
                     new Movie
                     {
@@ -39,7 +41,6 @@ namespace RazorPagesMovie.Models
                         Price = 8.99M,
                         Rating = "G"
                     },
-
                     new Movie
                     {
                         Title = "Ghostbusters 2",
@@ -48,7 +49,6 @@ namespace RazorPagesMovie.Models
                         Price = 9.99M,
                         Rating = "G"
                     },
-
                     new Movie
                     {
                         Title = "Rio Bravo",
