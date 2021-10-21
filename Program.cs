@@ -4,6 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RazorPagesMovie.Models;
 using System;
+using System.Globalization;
 
 namespace RazorPagesMovie
 {
@@ -15,6 +16,7 @@ namespace RazorPagesMovie
 
             using (var scope = host.Services.CreateScope())
             {
+                CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
                 var services = scope.ServiceProvider;
 
                 try
